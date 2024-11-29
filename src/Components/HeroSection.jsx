@@ -1,8 +1,10 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
 import PlayCircleOutlineOutlinedIcon from "@mui/icons-material/PlayCircleOutlineOutlined";
 import { red } from "@mui/material/colors";
 import Navbar from "./../Components/Navbar";
+import "./../Fonts/IBM Plex Sans Arabic.css";
+import videourl from "./../assets/video.mp4";
 
 const HeroSection = () => {
   return (
@@ -52,10 +54,17 @@ const HeroSection = () => {
                 border: "1px solid #E9D7FE",
               }}
             >
-              <Typography color="#6941C6">ميزات جديدة</Typography>
+              <Typography
+                className="ibm-plex-sans-arabic"
+                color="#6941C6"
+                sx={{ fontWeight: 500, fontSize: "14px" }}
+              >
+                ميزات جديدة
+              </Typography>
             </Box>
           </Box>
           <Typography
+            className="ibm-plex-sans-arabic"
             sx={{
               color: "#42307D",
               fontSize: "36px",
@@ -64,12 +73,14 @@ const HeroSection = () => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
+              textAlign: "center",
             }}
           >
             اكتشف أروع الفعاليات والعروض
             <span>الترفيهية في المملكة</span>
           </Typography>
           <Typography
+            className="ibm-plex-sans-arabic"
             sx={{
               color: "#6941C6",
               fontSize: "20px",
@@ -78,6 +89,8 @@ const HeroSection = () => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
+              textAlign: "center",
+              mt: 2,
             }}
           >
             استمتع بتجربة ترفيهية متكاملة، مع تذاكر الفعاليات المتنوعة في
@@ -86,6 +99,7 @@ const HeroSection = () => {
           </Typography>
           <Box display={"flex"} gap={"8px"} py={1} mt={4}>
             <Button
+              className="ibm-plex-sans-arabic"
               variant="contained"
               sx={{
                 background:
@@ -96,13 +110,16 @@ const HeroSection = () => {
                 // boxShadow: "0px 0px 0px 1px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner-border, rgba(10, 13, 18, 0.18)) inset, 0px -2px 0px 0px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner, rgba(10, 13, 18, 0.05)) inset, 0px 1px 2px 0px var(--Colors-Effects-Shadows-shadow-xs, rgba(10, 13, 18, 0.05))",
                 fontSize: "18px",
                 fontWeight: "600",
+                py: "12px",
               }}
             >
               تسجيل الدخول
             </Button>
             <Button
+              className="ibm-plex-sans-arabic"
               variant="outlined"
               sx={{
+                color: "#414651",
                 gap: "5px",
                 display: "flex",
                 justifyContent: "center",
@@ -116,10 +133,11 @@ const HeroSection = () => {
                   "0px 0px 0px 1px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner-border, rgba(10, 13, 18, 0.18)) inset, 0px -2px 0px 0px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner, rgba(10, 13, 18, 0.05)) inset, 0px 1px 2px 0px var(--Colors-Effects-Shadows-shadow-xs, rgba(10, 13, 18, 0.05))",
                 fontSize: "18px",
                 fontWeight: "600",
+                py: "12px",
               }}
             >
               <PlayCircleOutlineOutlinedIcon
-                sx={{ width: "24px", height: "24px" }}
+                sx={{ width: "24px", height: "24px", color: "#414651" }}
               />
               حمل التطبيق
             </Button>
@@ -241,8 +259,9 @@ const HeroSection = () => {
       <Box
         sx={{
           background:
-            "linear-gradient(353deg,  rgba(255,255,255,1) 15%, rgba(249,245,255,1) 15%)",
-          top: -480,
+            "linear-gradient(355deg,  rgba(255,255,255,1) 18%, rgba(249,245,255,1) 18%)",
+          mt: { xs: -60, sm: -62 },
+          mb: { xl: 10 },
           position: "relative",
           minHeight: "500px",
         }}
@@ -251,9 +270,9 @@ const HeroSection = () => {
           sx={{
             position: "relative",
             mx: "auto",
-            maxWidth: { xs: "350px", sm: "500px", md: "600px", xl: "1150px" },
+            maxWidth: { xs: "350px", sm: "600px", md: "900px", xl: "1150px" },
             overflow: "hidden",
-            // borderRadius: "16px",
+            borderRadius: "16px",
 
             zIndex: 2,
           }}
@@ -263,13 +282,19 @@ const HeroSection = () => {
               width: "100%",
               height: "auto",
               display: "block",
+              borderRadius: "16px",
             }}
-            controls
+            muted
+            src={videourl}
+            // controls
+            // poster="src/assets/Video player.png"
+            autoPlay
+            loop
           >
-            <source
-              src="your-video-source.mp4" // Replace with the actual video file
+            {/* <source
+              src={videourl} // Replace with the actual video file
               type="video/mp4"
-            />
+            /> */}
             Your browser does not support the video tag.
           </video>
         </Box>
