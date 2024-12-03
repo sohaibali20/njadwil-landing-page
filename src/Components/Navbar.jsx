@@ -51,25 +51,6 @@ function ResponsiveAppBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography> */}
           <Box
             display={{ xs: "none", md: "flex" }}
             justifyContent={"flex-start"}
@@ -79,12 +60,6 @@ function ResponsiveAppBar() {
           >
             <img src="src/assets/Njadwil logo -03 4.png" alt="Logo" />
           </Box>
-          {/* <Box
-            component="img"
-            src="/src/assets/Njadwil logo -03 3.png"
-            sx={{ maxWidth: "auto", height: "auto", display: { xs: "none", md: "flex" }, ml: 1 }}
-          /> */}
-
           <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -119,36 +94,25 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography> */}
           <Box
             display={{ xs: "flex", md: "none" }}
             justifyContent={"flex-start"}
             alignItems={"center"}
-            flexGrow={{xs:4, sm:1}}
+            flexGrow={{ xs: 4, sm: 1 }}
             ml={3}
           >
-            <img src="src/assets/Njadwil logo -03 4.png" alt="Logo" width={"100px"} />
+            <img
+              src="src/assets/Njadwil logo -03 4.png"
+              alt="Logo"
+              width={"100px"}
+            />
           </Box>
           <Box
-            sx={{ flexGrow: 1.5, display: { xs: "none", md: "flex" }, gap: {sm:2,lg:4} }}
+            sx={{
+              flexGrow: 1.5,
+              display: { xs: "none", md: "flex" },
+              gap: { sm: 2, lg: 4 },
+            }}
           >
             {pages.map((page) => (
               <Button
@@ -168,35 +132,6 @@ function ResponsiveAppBar() {
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            {/* <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
-                    {setting}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
             <Button
               className="ibm-plex-sans-arabic"
               variant="contained"
@@ -207,8 +142,8 @@ function ResponsiveAppBar() {
                 color: "#fff",
                 border: "2px solid rgba(255, 255, 255, 0.12)",
                 textTransform: "none",
-                px: {xs:"2px",md:"14px"},
-                py: {xs:"5px",md:"10px"},
+                px: { xs: "2px", md: "14px" },
+                py: { xs: "5px", md: "10px" },
                 borderRadius: "8px",
                 boxShadow:
                   "0px 0px 0px 1px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner-border, rgba(10, 13, 18, 0.18)) inset, 0px -2px 0px 0px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner, rgba(10, 13, 18, 0.05)) inset, 0px 1px 2px 0px var(--Colors-Effects-Shadows-shadow-xs, rgba(10, 13, 18, 0.05))",

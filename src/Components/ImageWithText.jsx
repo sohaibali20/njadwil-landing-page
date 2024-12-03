@@ -93,7 +93,6 @@
 
 // export default ImageWithText;
 
-
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
@@ -106,19 +105,24 @@ function ImageWithText() {
     triggerOnce: false, // Ensures the animation runs every time the component becomes visible
     threshold: 0.25, // Trigger when 25% of the component is visible
   });
-  
 
   // Animation variants
   const textVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
-    // hidden: { opacity: 0, y: -50 },
-    // visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -175,7 +179,7 @@ function ImageWithText() {
               textAlign: "left",
             }}
           >
-            أفضل تطبيق لبيع تذاكر الفعاليات
+            نحو مستقبل أكثر ذكاءً للفعاليات في المملكة{" "}
           </Typography>
         </motion.div>
 
@@ -198,9 +202,10 @@ function ImageWithText() {
               mb: 6,
             }}
           >
-            يقود تطبيق تحوّل الصناعة في مساحات تذاكر الأحداث الذكية حيث يمزج بين
-            التكنولوجيا المتطورة والتفاني الشديد لصناعة تجارب غير عادية. مهمتنا هي
-            تبسيط عمليات شراء التذاكر ورفع جودة حضور الأحداث من خلال الحلول الذكية
+            في نجدول ، نهدف إلى تحويل تجربة شراء التذاكر إلى تجربة سلسة، ذكية،
+            ومريحة. نقدم حلولاً مبتكرة لبيع تذاكر الفعاليات المختلفة، من الحفلات
+            الموسيقية والمؤتمرات إلى الفعاليات الرياضية والترفيهية، مع التركيز
+            على تقديم خدمات متميزة تلبي تطلعات عملائنا وتسهم في إثراء تجربتهم
           </Typography>
         </motion.div>
       </Box>
@@ -213,7 +218,7 @@ function ImageWithText() {
       >
         <Box
           sx={{
-            backgroundImage: `url('/Image.png')`,
+            backgroundImage: `url('/image1.png')`,
             width: "100%",
             height: {
               xs: "170px",
@@ -226,6 +231,7 @@ function ImageWithText() {
             backgroundSize: "cover",
             boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)",
             mt: 4,
+            borderRadius: "22px",
           }}
         />
       </motion.div>
@@ -234,5 +240,3 @@ function ImageWithText() {
 }
 
 export default ImageWithText;
-
-

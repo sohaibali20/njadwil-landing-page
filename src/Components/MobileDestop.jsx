@@ -398,8 +398,6 @@
 
 // export default FeaturesSection;
 
-
-
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2"; // Grid v2
@@ -412,7 +410,7 @@ import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
 import WallpaperOutlinedIcon from "@mui/icons-material/WallpaperOutlined";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import { useRef } from "react";
@@ -435,17 +433,17 @@ const FeaturesSection = () => {
   };
 
   const slideFromRight = {
-    hidden: { opacity: 0, x:  200 }, // Smaller translation on mobile
+    hidden: { opacity: 0, x: 200 }, // Smaller translation on mobile
     visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
   };
   const slidefromLeft = {
     hidden: { opacity: 0, x: -200 }, // Smaller translation on mobile
     visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
   };
-const slideFromTop = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
+  const slideFromTop = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
   return (
     <Box
       ref={ref}
@@ -502,8 +500,8 @@ const slideFromTop = {
                 maxWidth: "850px",
               }}
             >
-              يقود تطبيق تحويل الصناعة في مساحات تذاكر الأحداث الذكية حيث يمزج بين
-              التكنولوجيا المتطورة والتفاني لصناعة تجارب غير عادية.
+              يقود تطبيق تحويل الصناعة في مساحات تذاكر الأحداث الذكية حيث يمزج
+              بين التكنولوجيا المتطورة والتفاني لصناعة تجارب غير عادية.
               <span style={{ marginTop: "10px" }}>
                 مهمتنا هي تبسيط عمليات شراء التذاكر ورفع جودة حضور الأحداث من
                 خلال الحلول الذكية.
@@ -548,7 +546,7 @@ const slideFromTop = {
                 <motion.div
                   initial="hidden"
                   animate={inView ? "visible" : "hidden"}
-                  variants= {isMobile ? slideFromTop : slidefromLeft}
+                  variants={isMobile ? slideFromTop : slidefromLeft}
                 >
                   <Box
                     sx={{

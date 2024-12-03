@@ -41,7 +41,6 @@ const imageVariants = {
     transition: {
       duration: 0.5, // Slightly longer duration for smoother transitions
       ease: [0.42, 0, 0.58, 1], // Smooth ease-in-out curve
-      // times: [0, 0.6, 1], // Fine-tune the timing of each scale step
     },
   },
 };
@@ -211,7 +210,7 @@ const imageVariants = {
           item
           size={{ xs: 12, md: 6 }}
           position={"relative"}
-          height={{ md: 230, lg: 330, xl: 370 }}
+          height={{ md: 300, lg: 330, xl: 430 }}
           overflow={"hidden"}
         >
           <motion.div
@@ -227,6 +226,7 @@ const imageVariants = {
                 gap: 3,
                 flexWrap: "wrap",
                 background: "none",
+
               }}
             >
               <Box
@@ -238,6 +238,7 @@ const imageVariants = {
                   maxWidth: "auto",
                   height: "auto",
                   position: "relative",
+                  mt:{xs:"0px",sm:"0px",md:"70px",lg:"0px"}
                 }}
               />
             </Box>
