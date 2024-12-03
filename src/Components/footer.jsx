@@ -89,7 +89,6 @@ function Footer() {
                   color: "white",
                   border: "2px solid rgba(255, 255, 255, 0.12)",
                   borderRadius: "var(--radius-lg, 10px)",
-                  // boxShadow: "0px 0px 0px 1px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner-border, rgba(10, 13, 18, 0.18)) inset, 0px -2px 0px 0px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner, rgba(10, 13, 18, 0.05)) inset, 0px 1px 2px 0px var(--Colors-Effects-Shadows-shadow-xs, rgba(10, 13, 18, 0.05))",
                   fontSize: "18px",
                   fontWeight: "600",
                   py: "12px",

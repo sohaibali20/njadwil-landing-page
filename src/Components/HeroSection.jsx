@@ -12,7 +12,6 @@ const HeroSection = () => {
       <Box
         sx={{
           background: "#F9F5FF",
-          // height: "100vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -107,7 +106,6 @@ const HeroSection = () => {
                 color: "white",
                 border: "2px solid rgba(255, 255, 255, 0.12)",
                 borderRadius: "var(--radius-lg, 10px)",
-                // boxShadow: "0px 0px 0px 1px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner-border, rgba(10, 13, 18, 0.18)) inset, 0px -2px 0px 0px var(--Colors-Effects-Shadows-shadow-skeumorphic-inner, rgba(10, 13, 18, 0.05)) inset, 0px 1px 2px 0px var(--Colors-Effects-Shadows-shadow-xs, rgba(10, 13, 18, 0.05))",
                 fontSize: "18px",
                 fontWeight: "600",
                 py: "12px",
@@ -143,10 +141,6 @@ const HeroSection = () => {
             </Button>
           </Box>
         </Box>
-        {/* <Box sx={{width:"100%",display:{xs:"none",sm:"flex"}, justifyContent:"flex-end", alignItems:"center" }}>
-        <Box sx={{background:"#F9F5FF", width:{sm:"30%",md:"38.4%",lg:"27.3%", xl:"20.7%"},height:{ sm:"3.8vh",md:"3.5vh", xl:"10vh"}, position:"relative", top:{sm:170,md:160,lg:155, xl:166},}}>
-        </Box>
-      </Box> */}
         <Box
           sx={{
             display: "flex",
@@ -286,15 +280,9 @@ const HeroSection = () => {
             }}
             muted
             src={videourl}
-            // controls
-            // poster="src/assets/Video player.png"
             autoPlay
             loop
           >
-            {/* <source
-              src={videourl} // Replace with the actual video file
-              type="video/mp4"
-            /> */}
             Your browser does not support the video tag.
           </video>
         </Box>
