@@ -9,6 +9,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import Divider from "@mui/material/Divider";
 import "./../Fonts/IBM Plex Sans Arabic.css";
+import logo from "../assets/Njadwil logo.png";
 
 function Footer() {
   const pages = [
@@ -16,7 +17,7 @@ function Footer() {
     "من نحن",
     "الميزات",
     "شركائنا",
-    "احب فعالية",
+    "انضم الينا كصاحب فعالية",
     "تواصل معنا",
   ];
 
@@ -26,7 +27,7 @@ function Footer() {
         backgroundColor: "#53389E", // Footer background color
         color: "#fff",
         py: 6,
-        px: { sx: 0, md: 16 },
+        px: { xs: 0, md: 16 },
         direction: "rtl", // RTL layout
       }}
     >
@@ -216,7 +217,7 @@ function Footer() {
               </Button>
             </Box>
           </Grid>
-          <Grid item size={{ xs: 12, sm: 9 }}>
+          <Grid item size={{ xs: 12, sm: 10, md: 7 }}>
             <Box
               sx={{
                 display: "flex",
@@ -238,13 +239,13 @@ function Footer() {
                   نجدول
                 </Typography>
                 <img
-                  src="src/assets/Njadwil logo.png"
+                  src={logo}
                   alt="Logo"
                   width={"41px"}
                   height={"24.191px"}
                 />
               </Box>
-              <Typography
+              {/* <Typography
                 className="ibm-plex-sans-arabic"
                 sx={{
                   fontWeight: 400,
@@ -257,22 +258,26 @@ function Footer() {
               >
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
                 هذا النص من مولد النص العربى
-              </Typography>
-              <Box display={"flex"} gap={{ xs: 0, md: 2, lg: 5 }}>
+              </Typography> */}
+              <Box width={"100%"} display={"flex"}  gap={{ xs: 0, md: 2, lg: 2 }} px={{ xs: 2, md: 0 }} justifyContent={{xs:"center",md:"flex-start"}} textAlign={"left"}>
                 {pages.map((page) => (
+                  <Grid item size={{ xs: 6 }} sx={{display:"flex", justifyContent:{xs:"center",md:"flex-end"}}} >
                   <Button
                     className="ibm-plex-sans-arabic"
                     key={page}
                     sx={{
                       my: 2,
                       color: "#E9D7FE",
-                      display: "block",
-                      fontSize: "16px",
+                      // display: "block",
+                      fontSize: {xs:"12px",md:"16px"},
                       fontWeight: 600,
+                      textAlign: "left",
+                      padding: {xs:"10px", md:0}
                     }}
                   >
                     {page}
                   </Button>
+                  </Grid>
                 ))}
               </Box>
             </Box>
@@ -287,7 +292,7 @@ function Footer() {
           alignItems: "center",
           borderTop: "1px solid #7F56D9",
           pt: 2,
-          // px: {xs:0,md:16},
+          px: {xs:2,md:0},
         }}
       >
         <Box sx={{ display: "flex", gap: 2 }}>
