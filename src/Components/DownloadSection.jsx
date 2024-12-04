@@ -9,6 +9,7 @@ import { Icon } from "@iconify/react";
 import "./../Fonts/IBM Plex Sans Arabic.css";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import image from "../assets/image.png"
 
 
 const DownloadSection = () => {
@@ -48,13 +49,6 @@ const imageVariants = {
 
   return (
     <Box ref={containerRef} width={"100%"} sx={{ px: { sm: 18, md: 18 }, mb: 8, mt: 8 }}>
-  <motion.div
-    whileHover={{
-      scale: 1.03, // Slightly scales up the box
-      y: -5, // Moves it slightly upwards to give an elevated effect
-      transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
-    }}
-  >
     <Box
       sx={{
         pt: 8,
@@ -121,6 +115,11 @@ const imageVariants = {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={slideFromRight}
+              whileHover={{
+                scale: 1.03, // Slightly scales up the box
+                y: -5, // Moves it slightly upwards to give an elevated effect
+                transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+              }}
             >
               <Button
                 variant="outlined"
@@ -165,6 +164,11 @@ const imageVariants = {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={slidefromLeft}
+              whileHover={{
+                scale: 1.03, // Slightly scales up the box
+                y: -5, // Moves it slightly upwards to give an elevated effect
+                transition: { duration: 0.3, ease: "easeOut" }, // Smooth transition
+              }}
             >
               <Button
                 variant="outlined"
@@ -231,7 +235,7 @@ const imageVariants = {
             >
               <Box
                 component="img"
-                src="/src/assets/image.png"
+                src={image}
                 alt="Mobile Mockup"
                 sx={{
                   width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
@@ -246,7 +250,6 @@ const imageVariants = {
         </Grid>
       </Grid>
     </Box>
-  </motion.div>
 </Box>
 
   );

@@ -13,6 +13,9 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import "./../Fonts/IBM Plex Sans Arabic.css";
+import logo from "../assets/Njadwil logo -03 4.png"
+import logo1 from "../assets/Njadwil logo -03 3.png"
+import mainlogo from "../assets/mainlogo.svg"
 
 const pages = ["من نحن", "شركائنا", "انضم الينا كصاحب فعالية", "حمل التطبيق"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -56,11 +59,11 @@ function ResponsiveAppBar() {
             justifyContent={"flex-start"}
             alignItems={"center"}
             flexGrow={1}
-            ml={3}
+            ml={0}
           >
-            <img src="src/assets/Njadwil logo -03 4.png" alt="Logo" />
+            <img src={mainlogo} alt="Logo" width={"160px"} height={"80px"} />
           </Box>
-          <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 2, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -99,12 +102,13 @@ function ResponsiveAppBar() {
             justifyContent={"flex-start"}
             alignItems={"center"}
             flexGrow={{ xs: 4, sm: 1 }}
-            ml={3}
+            ml={1}
           >
             <img
-              src="src/assets/Njadwil logo -03 4.png"
+              src={mainlogo}
               alt="Logo"
-              width={"100px"}
+              width={"160px"} height={"80px"}
+
             />
           </Box>
           <Box
@@ -136,7 +140,7 @@ function ResponsiveAppBar() {
               className="ibm-plex-sans-arabic"
               variant="contained"
               sx={{
-                fontSize: "14px",
+                fontSize: {xs:"8px",md:"14px"},
                 fontWeight: 600,
                 bgcolor: "#7F56D9",
                 color: "#fff",

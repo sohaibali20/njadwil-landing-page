@@ -417,6 +417,7 @@ import { useRef } from "react";
 import "./../Fonts/IBM Plex Sans Arabic.css";
 import { Slide } from "react-awesome-reveal";
 import { useMediaQuery } from "@mui/material";
+import image1 from "../assets/image1.png";
 
 const FeaturesSection = () => {
   const [ref, inView] = useInView({
@@ -451,7 +452,7 @@ const FeaturesSection = () => {
         py: 6,
         pl: { xs: 2, sm: 18, md: 18 },
         pr: { xs: 2, sm: 18, md: 0 },
-        bgcolor: "#fff",
+        bgcolor: "#F9F5FF",
       }}
     >
       <Grid container spacing={4} alignItems="center">
@@ -516,25 +517,25 @@ const FeaturesSection = () => {
                 Icon: AdminPanelSettingsIcon,
                 title: "السرية",
                 description:
-                  "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
+                  "استخدام تقنيات تشفير متقدمة لضمان أن جميع المعلومات التي يتم تبادلها بين المستخدمين والنظام تظل سرية وآمنة.",
               },
               {
                 Icon: ShieldOutlinedIcon,
                 title: "الامان",
                 description:
-                  "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
+                  "تعتبَر تقنية البلوك تشين آمنة للغاية نظرًا لتصميمها الموزع والمشفر.",
               },
               {
                 Icon: WallpaperOutlinedIcon,
-                title: "تذاكر nft",
+                title: "تذاكر NFT",
                 description:
-                  "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
+                  "وهي تذاكر رقمية فريدة تعتمد على المعايير الغير القابلة للاستبدال أو التزوير.",
               },
               {
                 Icon: ElectricBoltIcon,
                 title: "السرعة و الكفاءة",
                 description:
-                  "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى",
+                  "في تقنية البلوك تشين للـ (NFT) تتميز بالقدرة على تنفيذ المعاملات بسرعة فائقة وتأكيدها بشكل سريع. ",
               },
             ].map((feature, index) => (
               <Grid
@@ -630,7 +631,7 @@ const FeaturesSection = () => {
             >
               <Box
                 component="img"
-                src="/src/assets/image1.png"
+                src={image1}
                 alt="Mobile Mockup"
                 sx={{
                   width: { xs: "100%", sm: "100%", md: "200%", lg: "130%" },
