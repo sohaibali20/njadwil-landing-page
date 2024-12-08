@@ -3,7 +3,7 @@ import React from "react";
 import PlayCircleOutlineOutlinedIcon from "@mui/icons-material/PlayCircleOutlineOutlined";
 import { red } from "@mui/material/colors";
 import Navbar from "./../Components/Navbar";
-import "./../Fonts/IBM Plex Sans Arabic.css";
+import "../index.css";
 import videourl from "./../assets/video.mp4";
 
 const HeroSection = () => {
@@ -278,10 +278,12 @@ const HeroSection = () => {
               display: "block",
               borderRadius: "16px",
             }}
-            muted
             src={videourl}
+            muted
+            playsInline // Allows autoplay within the webpage
             autoPlay
             loop
+            preload="auto" // Preloads video for smoother autoplay
           >
             Your browser does not support the video tag.
           </video>

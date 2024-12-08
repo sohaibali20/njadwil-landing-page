@@ -8,7 +8,7 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import Divider from "@mui/material/Divider";
-import "./../Fonts/IBM Plex Sans Arabic.css";
+import "../index.css";
 import logo from "../assets/Njadwil logo.png";
 
 function Footer() {
@@ -238,12 +238,7 @@ function Footer() {
                 >
                   نجدول
                 </Typography>
-                <img
-                  src={logo}
-                  alt="Logo"
-                  width={"41px"}
-                  height={"24.191px"}
-                />
+                <img src={logo} alt="Logo" width={"41px"} height={"24.191px"} />
               </Box>
               {/* <Typography
                 className="ibm-plex-sans-arabic"
@@ -259,24 +254,38 @@ function Footer() {
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
                 هذا النص من مولد النص العربى
               </Typography> */}
-              <Box width={"100%"} display={"flex"}  gap={{ xs: 0, md: 2, lg: 2 }} px={{ xs: 2, md: 0 }} justifyContent={{xs:"center",md:"flex-start"}} textAlign={"left"}>
+              <Box
+                width={"100%"}
+                display={"flex"}
+                gap={{ xs: 0, md: 2, lg: 2 }}
+                px={{ xs: 2, md: 0 }}
+                justifyContent={{ xs: "center", md: "flex-start" }}
+                textAlign={"left"}
+              >
                 {pages.map((page) => (
-                  <Grid item size={{ xs: 6 }} sx={{display:"flex", justifyContent:{xs:"center",md:"flex-end"}}} >
-                  <Button
-                    className="ibm-plex-sans-arabic"
-                    key={page}
+                  <Grid
+                    item
+                    size={{ xs: 6 }}
                     sx={{
-                      my: 2,
-                      color: "#E9D7FE",
-                      // display: "block",
-                      fontSize: {xs:"12px",md:"16px"},
-                      fontWeight: 600,
-                      textAlign: "left",
-                      padding: {xs:"10px", md:0}
+                      display: "flex",
+                      justifyContent: { xs: "center", md: "flex-end" },
                     }}
                   >
-                    {page}
-                  </Button>
+                    <Button
+                      className="ibm-plex-sans-arabic"
+                      key={page}
+                      sx={{
+                        my: 2,
+                        color: "#E9D7FE",
+                        // display: "block",
+                        fontSize: { xs: "12px", md: "16px" },
+                        fontWeight: 600,
+                        textAlign: "left",
+                        padding: { xs: "10px", md: 0 },
+                      }}
+                    >
+                      {page}
+                    </Button>
                   </Grid>
                 ))}
               </Box>
@@ -292,14 +301,17 @@ function Footer() {
           alignItems: "center",
           borderTop: "1px solid #7F56D9",
           pt: 2,
-          px: {xs:2,md:0},
+          px: { xs: 2, md: 0 },
         }}
       >
         <Box sx={{ display: "flex", gap: 2 }}>
-          <Link href="#" color="inherit">
+          <Link href="https://twitter.com/Njadwil" color="inherit">
             <XIcon />
           </Link>
-          <Link href="#" color="inherit">
+          <Link
+            href="https://www.linkedin.com/company/njadwil/"
+            color="inherit"
+          >
             <LinkedInIcon />
           </Link>
           <Link href="#" color="inherit">
