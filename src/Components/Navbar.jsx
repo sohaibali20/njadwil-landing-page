@@ -13,14 +13,16 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import "./../Fonts/IBM Plex Sans Arabic.css";
-import logo from "../assets/Njadwil logo -03 4.png"
-import logo1 from "../assets/Njadwil logo -03 3.png"
-import mainlogo from "../assets/mainlogo.svg"
+// import logo from "../assets/Njadwil logo -03 4.png"
+import logo1 from "../assets/Njadwil logo -03 3.png";
+import mainlogo from "../assets/mainlogo.svg";
+import { useNavigate } from "react-router-dom";
 
 const pages = ["من نحن", "شركائنا", "انضم الينا كصاحب فعالية", "حمل التطبيق"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -104,12 +106,7 @@ function ResponsiveAppBar() {
             flexGrow={{ xs: 4, sm: 1 }}
             ml={1}
           >
-            <img
-              src={mainlogo}
-              alt="Logo"
-              width={"160px"} height={"80px"}
-
-            />
+            <img src={mainlogo} alt="Logo" width={"160px"} height={"80px"} />
           </Box>
           <Box
             sx={{
@@ -122,7 +119,13 @@ function ResponsiveAppBar() {
               <Button
                 className="ibm-plex-sans-arabic"
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  if (page === "انضم الينا كصاحب فعالية") {
+                    window.location.href = "https://portal.njadwil.com/signin";
+                  } else {
+                    handleCloseNavMenu();
+                  }
+                }}
                 sx={{
                   my: 2,
                   color: "#535862",
@@ -140,7 +143,7 @@ function ResponsiveAppBar() {
               className="ibm-plex-sans-arabic"
               variant="contained"
               sx={{
-                fontSize: {xs:"8px",md:"14px"},
+                fontSize: { xs: "8px", md: "14px" },
                 fontWeight: 600,
                 bgcolor: "#7F56D9",
                 color: "#fff",

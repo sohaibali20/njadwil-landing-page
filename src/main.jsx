@@ -17,6 +17,7 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import App from "./App";
 import stylisRTLPlugin from "stylis-plugin-rtl";
+import { BrowserRouter } from "react-router-dom";
 
 // Create an RTL cache
 const rtlCache = createCache({
@@ -41,13 +42,16 @@ const rtlTheme = createTheme({
 });
 
 ReactDOM.render(
-  <CacheProvider value={rtlCache}>
-    <ThemeProvider theme={rtlTheme}>
-      <CssBaseline />
-      <div dir="rtl">
-        <App />
-      </div>
-    </ThemeProvider>
-  </CacheProvider>,
+  <BrowserRouter>
+    <CacheProvider value={rtlCache}>
+      <ThemeProvider theme={rtlTheme}>
+        <CssBaseline />
+        <div dir="rtl">
+          <App />
+        </div>
+      </ThemeProvider>
+    </CacheProvider>
+    ,
+  </BrowserRouter>,
   document.getElementById("root")
 );
