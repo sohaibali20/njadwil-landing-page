@@ -1,6 +1,6 @@
 // import React from "react";
 // import { Box, Container, Typography } from "@mui/material";
-// import "./../Fonts/IBM Plex Sans Arabic.css";
+// import "../index.css"
 
 // function ImageWithText() {
 //   return (
@@ -97,7 +97,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import "./../Fonts/IBM Plex Sans Arabic.css";
+import "../index.css";
 
 function ImageWithText() {
   // Hook for intersection observer

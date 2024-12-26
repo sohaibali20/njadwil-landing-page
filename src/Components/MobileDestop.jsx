@@ -7,7 +7,7 @@
 // import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
 // import WallpaperOutlinedIcon from "@mui/icons-material/WallpaperOutlined";
 // import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
-// import "./../Fonts/IBM Plex Sans Arabic.css";
+// import "../index.css"
 
 // // Animations
 // const slideFromTop = {
@@ -414,7 +414,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import { useRef } from "react";
-import "./../Fonts/IBM Plex Sans Arabic.css";
+import "../index.css";
 import { Slide } from "react-awesome-reveal";
 import { useMediaQuery } from "@mui/material";
 import image1 from "../assets/image1.png";
@@ -501,12 +501,14 @@ const FeaturesSection = () => {
                 maxWidth: "850px",
               }}
             >
-              يقود تطبيق تحويل الصناعة في مساحات تذاكر الأحداث الذكية حيث يمزج
+              {/* يقود تطبيق تحويل الصناعة في مساحات تذاكر الأحداث الذكية حيث يمزج
               بين التكنولوجيا المتطورة والتفاني لصناعة تجارب غير عادية.
               <span style={{ marginTop: "10px" }}>
                 مهمتنا هي تبسيط عمليات شراء التذاكر ورفع جودة حضور الأحداث من
                 خلال الحلول الذكية.
-              </span>
+              </span> */}
+              نجدول تمكّن المنظمين والشركات من إعادة ابتكار عملياتهم، مع تحسين
+              الأمان، الشفافية، وتجربة المستخدم من خلال حلول رقمية متطورة.
             </Typography>
           </motion.div>
 

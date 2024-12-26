@@ -1,7 +1,7 @@
 // import React from "react";
 // import { Box, Container, Typography } from "@mui/material";
 // import Grid from '@mui/material/Grid2';
-// import "./../Fonts/IBM Plex Sans Arabic.css";
+// import "../index.css"
 
 // const partners = [
 //   { id: 1, logoname: "src/assets/Logotext.svg", logo: "src/assets/Logomark.svg" },
@@ -93,7 +93,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2"; // Grid v2
 import { motion } from "framer-motion"; // Import Framer Motion
-import "./../Fonts/IBM Plex Sans Arabic.css";
+import "../index.css";
 import logo1 from "../assets/logo1.png";
 import logo2 from "../assets/logo2.png";
 import logo3 from "../assets/logo3.png";
@@ -141,6 +141,7 @@ const partners = [
 function PartnersSection() {
   return (
     <Box
+      id="شركائنا"
       sx={{
         position: "relative",
         mt: { xs: -30, sm: -10, md: 20 },
@@ -148,7 +149,6 @@ function PartnersSection() {
         backgroundColor: "#F7F7F7", // Light background
         textAlign: "center",
         direction: "rtl", // RTL for Arabic layout
-        px: { xs: 0, md: 18 },
       }}
     >
       {/* Title */}
@@ -164,6 +164,7 @@ function PartnersSection() {
             flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-between",
             width: "100%",
+            px: { xs: 0, md: 18 },
           }}
         >
           <Typography
@@ -192,7 +193,7 @@ function PartnersSection() {
               fontSize: "32px",
             }}
           >
-            شركاؤنا الرسميين
+            شركاء النجاح
           </Typography>
         </Box>
       </motion.div>
@@ -202,7 +203,7 @@ function PartnersSection() {
       {/* Wrapper Box for logos */}
       <Box
         sx={{
-          backgroundColor: "#F4EBFF",
+          backgroundColor: "rgba(244, 235, 255, 0.4)",
           borderRadius: "30px",
           p: 4,
           overflow: "hidden",
@@ -210,38 +211,37 @@ function PartnersSection() {
           position: "relative",
         }}
       >
-        
-          <Box
-            sx={{
-              display: "inline-flex",
-              alignItems: "center",
-              animation: "scroll 500s linear infinite", // Infinite scroll animation
-            }}
-          >
-            {/* Repeat logos enough times to ensure seamless scrolling */}
-            {[...Array(10)] // Repeat the partner array 3 times
-              .fill(partners)
-              .flat()
-              .map((partner, index) => (
-                <Box
-                  key={index}
-                  component="img"
-                  src={partner.logo}
-                  alt={`Icon logo for partner ${partner.id}`}
-                  sx={{
-                    width: partner.width,
-                    height: partner.height,
-                    flexShrink: 0, // Prevent logos from shrinking
-                    marginRight: "40px", // Add spacing between logos
-                    marginLeft:"40px"
-                  }}
-                />
-              ))}
-          </Box>
+        <Box
+          sx={{
+            display: "inline-flex",
+            alignItems: "center",
+            animation: "scroll 1600s linear infinite", // Infinite scroll animation
+          }}
+        >
+          {/* Repeat logos enough times to ensure seamless scrolling */}
+          {[...Array(70)] // Repeat the partner array 3 times
+            .fill(partners)
+            .flat()
+            .map((partner, index) => (
+              <Box
+                key={index}
+                component="img"
+                src={partner.logo}
+                alt={`Icon logo for partner ${partner.id}`}
+                sx={{
+                  width: partner.width,
+                  height: partner.height,
+                  flexShrink: 0, // Prevent logos from shrinking
+                  marginRight: "40px", // Add spacing between logos
+                  marginLeft: "40px",
+                }}
+              />
+            ))}
+        </Box>
 
-          {/* Keyframes for seamless animation */}
-          <style>
-            {`
+        {/* Keyframes for seamless animation */}
+        <style>
+          {`
       @keyframes scroll {
         from {
           transform: translateX(0);
@@ -251,9 +251,9 @@ function PartnersSection() {
         }
       }
     `}
-          </style>
-        </Box>
+        </style>
       </Box>
+    </Box>
   );
 }
 
