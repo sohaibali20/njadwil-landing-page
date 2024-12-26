@@ -51,7 +51,7 @@ function ResponsiveAppBar() {
     const offset = 50;
 
     if (id === "انضم الينا كصاحب فعالية") {
-      window.location.href = "https://portal.njadwil.com/signin";
+      window.location.href = "https://portal.njadwil.com/signup";
     }
 
     if (section) {
