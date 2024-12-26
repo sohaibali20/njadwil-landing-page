@@ -12,7 +12,11 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+
 import "../index.css";
+import { useNavigate } from "react-router-dom";
+import "./../Fonts/IBM Plex Sans Arabic.css";
+
 import logo from "../assets/Njadwil logo -03 4.png";
 import logo1 from "../assets/Njadwil logo -03 3.png";
 import mainlogo from "../assets/mainlogo.svg";
@@ -21,6 +25,7 @@ const pages = ["من نحن", "شركائنا", "انضم الينا كصاحب 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -44,6 +49,11 @@ function ResponsiveAppBar() {
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     const offset = 50;
+
+    if (id === "انضم الينا كصاحب فعالية") {
+      window.location.href = "https://portal.njadwil.com/signin";
+    }
+
     if (section) {
       const targetScroll = section.offsetTop - offset;
       section.scrollIntoView({ behavior: "smooth" }); // Smooth scrolling
