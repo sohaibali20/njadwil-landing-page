@@ -19,7 +19,9 @@ const HeroSection = () => {
           gap: 10,
         }}
       >
-        <Box sx={{ width: "80%", mt: 4 }}>
+        <Box
+          sx={{ width: "80%", mt: 4, position: "fixed", top: 0, zIndex: 1000 }}
+        >
           <Navbar />
         </Box>
         <Box
@@ -28,6 +30,7 @@ const HeroSection = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            mt: 25,
           }}
         >
           <Box
