@@ -5,8 +5,26 @@ import { red } from "@mui/material/colors";
 import Navbar from "./../Components/Navbar";
 import "../index.css";
 import videourl from "./../assets/video.mp4";
+import { useState } from "react";
+import { useEffect } from "react";
+
 
 const HeroSection = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <Box
@@ -20,7 +38,16 @@ const HeroSection = () => {
         }}
       >
         <Box
-          sx={{ width: "80%", mt: 4, position: "fixed", top: 0, zIndex: 1000 }}
+          sx={{
+            background: isScrolled ? "white" : "transparent",
+            borderRadius: isScrolled ? "0px 0px 16px 16px" : "16px",
+            width: isScrolled ? "100%" : "80%",
+            mt: isScrolled ? 0 : 4,
+            position: isScrolled ? "fixed" : "static",
+            top: 0,
+            zIndex: 1000,
+            transition: "width 0.3s ease-in-out, margin-top 0.3s ease-in-out", // Add transition for smooth effect
+          }}
         >
           <Navbar />
         </Box>
@@ -30,7 +57,7 @@ const HeroSection = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            mt: 25,
+            mt: isScrolled ? 22 : 0,
           }}
         >
           <Box
