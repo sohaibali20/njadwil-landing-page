@@ -9,7 +9,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import Divider from "@mui/material/Divider";
 import "../index.css";
-import logo from "../assets/Njadwil logo.png";
+import logo from "../assets/njadwil-footer-logo.svg";
 
 function Footer() {
   const pages = [
@@ -238,7 +238,7 @@ function Footer() {
                 >
                   نجدول
                 </Typography>
-                <img src={logo} alt="Logo" width={"41px"} height={"24.191px"} />
+                <img src={logo} alt="Logo" width={"41px"} height={"41.191px"} />
               </Box>
               {/* <Typography
                 className="ibm-plex-sans-arabic"
