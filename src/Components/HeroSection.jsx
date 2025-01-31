@@ -8,7 +8,6 @@ import videourl from "./../assets/video.mp4";
 import { useState } from "react";
 import { useEffect } from "react";
 
-
 const HeroSection = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -49,7 +48,7 @@ const HeroSection = () => {
             transition: "width 0.3s ease-in-out, margin-top 0.3s ease-in-out", // Add transition for smooth effect
           }}
         >
-          <Navbar />
+          <Navbar isScrolled={isScrolled} />
         </Box>
         <Box
           sx={{

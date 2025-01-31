@@ -24,7 +24,7 @@ import mainlogo from "../assets/mainlogo.svg";
 const pages = ["من نحن", "شركائنا", "انضم الينا كصاحب فعالية", "حمل التطبيق"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({ isScrolled }) {
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -69,7 +69,7 @@ function ResponsiveAppBar() {
     <>
       <AppBar
         sx={{
-          borderRadius: "16px",
+          borderRadius: isScrolled ? "0 0 16px 16px" : "16px",
           border: "1px solid var(--Colors-Border-border-secondary, #E9EAEB)",
           backgroundColor: "#FFF",
           color: "black",
