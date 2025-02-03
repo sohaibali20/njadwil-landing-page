@@ -21,7 +21,12 @@ import logo from "../assets/Njadwil logo -03 4.png";
 import logo1 from "../assets/Njadwil logo -03 3.png";
 import mainlogo from "../assets/mainlogo.svg";
 
-const pages = ["من نحن", "شركائنا", "انضم الينا كصاحب فعالية", "حمل التطبيق"];
+const pages = [
+  { name: "من نحن", id: "about" },
+  { name: "شركائنا", id: "partners" },
+  { name: "انضم الينا كصاحب فعالية", id: "join-us" },
+  { name: "حمل التطبيق", id: "download" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar({ isScrolled }) {
@@ -48,10 +53,16 @@ function ResponsiveAppBar({ isScrolled }) {
   // Scroll to section
   const handleScroll = (id) => {
     const section = document.getElementById(id);
-    const offset = 50;
+    let offset = 50;
 
-    if (id === "انضم الينا كصاحب فعالية") {
+    if (id === "join-us") {
       window.location.href = "https://portal.njadwil.com/signup";
+    } else {
+      navigate(`/${id}`);
+    }
+
+    if (id === "download") {
+      offset += 100; // Add extra offset for the download section
     }
 
     if (section) {
@@ -119,10 +130,12 @@ function ResponsiveAppBar({ isScrolled }) {
                 {pages.map((page) => (
                   <MenuItem
                     className="ibm-plex-sans-arabic"
-                    key={page}
-                    onClick={() => handleScroll(page)}
+                    key={page.id}
+                    onClick={() => handleScroll(page.id)}
                   >
-                    <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                    <Typography sx={{ textAlign: "center" }}>
+                      {page.name}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -146,8 +159,8 @@ function ResponsiveAppBar({ isScrolled }) {
               {pages.map((page) => (
                 <Button
                   className="ibm-plex-sans-arabic"
-                  key={page}
-                  onClick={() => handleScroll(page)}
+                  key={page.id}
+                  onClick={() => handleScroll(page.id)}
                   sx={{
                     my: 2,
                     color: "#535862",
@@ -178,7 +191,7 @@ function ResponsiveAppBar({ isScrolled }) {
                     },
                   }}
                 >
-                  {page}
+                  {page.name}
                 </Button>
               ))}
             </Box>

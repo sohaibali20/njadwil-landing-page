@@ -1,15 +1,15 @@
-import { Box, Button, Container, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Typography } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import PlayCircleOutlineOutlinedIcon from "@mui/icons-material/PlayCircleOutlineOutlined";
-import { red } from "@mui/material/colors";
 import Navbar from "./../Components/Navbar";
 import "../index.css";
 import videourl from "./../assets/video.mp4";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const HeroSection = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -24,6 +24,26 @@ const HeroSection = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const sectionId = location.pathname.substring(1); // Get the section id from the path
+    if (sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        let offset = 50;
+        if (sectionId === "download") {
+          offset += 100; // Add extra offset for the download section
+        }
+        const targetScroll = section.offsetTop - offset;
+        section.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({
+          top: targetScroll,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <Box
@@ -45,7 +65,7 @@ const HeroSection = () => {
             position: isScrolled ? "fixed" : "static",
             top: 0,
             zIndex: 1000,
-            transition: "width 0.3s ease-in-out, margin-top 0.3s ease-in-out", // Add transition for smooth effect
+            transition: "width 0.3s ease-in-out, margin-top 0.3s ease-in-out",
           }}
         >
           <Navbar isScrolled={isScrolled} />
@@ -176,7 +196,6 @@ const HeroSection = () => {
             justifyContent: "space-between",
             alignItems: "center",
             width: "100%",
-            // background:{sm:"white"},
           }}
         >
           <Box
