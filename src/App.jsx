@@ -11,12 +11,21 @@ import Aboutus from "./Components/Aboutus.jsx";
 function App() {
   return (
     <>
-      <HeroSection />
-      <PartnersSection />
-      <Aboutus />
-      {/* <ImageWithText /> */}
-      <FeaturesSection />
-      <DownloadSection />
+      <div id="hero">
+        <HeroSection />
+      </div>
+      <div id="partners">
+        <PartnersSection />
+      </div>
+      <div id="about">
+        <Aboutus />
+      </div>
+      <div id="features">
+        <FeaturesSection />
+      </div>
+      <div id="download">
+        <DownloadSection />
+      </div>
       <Footer />
     </>
   );

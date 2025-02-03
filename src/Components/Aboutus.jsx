@@ -33,7 +33,7 @@ const Aboutus = () => {
   return (
     <Box
       ref={ref}
-      id="من نحن"
+      id="about"
       sx={{
         py: 6,
         pr: { xs: 2, sm: 18, md: 18, lg: 0 },

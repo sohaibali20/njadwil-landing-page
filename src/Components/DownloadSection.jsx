@@ -46,7 +46,7 @@ const DownloadSection = () => {
 
   return (
     <Box
-      id="حمل التطبيق"
+      id="download"
       ref={containerRef}
       width={"100%"}
       sx={{ px: { sm: 18, md: 18 }, mb: 8, mt: 8 }}
