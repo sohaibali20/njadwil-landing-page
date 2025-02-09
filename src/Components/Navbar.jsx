@@ -25,6 +25,7 @@ const pages = [
   { name: "من نحن", id: "about" },
   { name: "شركائنا", id: "partners" },
   { name: "انضم الينا كصاحب فعالية", id: "join-us" },
+  { name: "سجل اهتمامك", id: "interest" },
   { name: "حمل التطبيق", id: "download" },
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -59,6 +60,10 @@ function ResponsiveAppBar({ isScrolled }) {
       window.location.href = "https://portal.njadwil.com/signup";
     } else {
       navigate(`/${id}`);
+    }
+    if (id === "interest") {
+      window.location.href =
+        "https://docs.google.com/forms/d/e/1FAIpQLSeSZhAIX6VHqE2Kzxkwc3ZdkZUVsALZHoF515zbKq_ds1avxw/viewform?usp=dialog";
     }
 
     if (id === "download") {
